@@ -68,24 +68,161 @@
   \tableofcontents[sectionstyle=show,subsectionstyle=show,subsubsectionstyle=hide]
 \end{frame}
 
-\section{First section}
+\section{Digital Electonic Basics}
 
-\subsection{First subsection}
+\subsection{Considering a real problem}
 
 \begin{frame}
-  \frametitle{A Kick-Ass Title}
-  \framesubtitle{A Kick-Ass Title Subtitle}
-  \begin{block}{Block environment}
+  \frametitle{Digital Electronics Basics}
+  \framesubtitle{Considering a real problem}
+  \begin{block}{Problem}
+	  A tank is filled by 2 pipes : $V_1$ and $V_2$.
+	  We consider 3 levels
     \begin{itemize}
-    \item Item 1
-    \item Item 2
+	\item Warning (W)
+	\item Bottom (B)
+	\item top (T)
+    \end{itemize}
+    When level is behind W, $V_1$ et $V_2$ are opened.\\
+    When level is between W and B, only $V_1$ is opened.\\
+    When level is between B and T, only $V_2$ is opened.\\
+    When level is upper T, we close the pipe.
+  \end{block}
+
+  %  \begin{figure}
+  %    \centering
+  %    \includegraphics[width=.2\textwidth]{./images/logos/le2i-logo.pdf}
+  %    \caption{Include an image}
+  %  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Digital Electronics Basics}
+  \framesubtitle{Considering a real problem}
+  \begin{block}{How to do?}
+	  \begin{itemize}
+		  \item Make a drawing
+	  \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Digital Electronics Basics}
+  \framesubtitle{Considering a real problem}
+  \begin{block}{How to do?}
+	  \begin{itemize}
+		  \item Make a drawing
+		\item Make the truth table
+	  \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Digital Electronics Basics}
+  \framesubtitle{Considering a real problem}
+  \begin{block}{How to do?}
+	  \begin{itemize}
+		  \item Make a drawing
+		\item Make the truth table
+		\item Reduice complexity by using Karnaugh table and rules
+	  \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Digital Electronics Basics}
+  \framesubtitle{Considering a real problem}
+  \begin{block}{Implementation using Electronic component}
+    \begin{itemize}
+	\item Which Family? CMOS or TTL technology?
     \end{itemize}
   \end{block}
-  \begin{figure}
-    \centering
-    \includegraphics[width=.2\textwidth]{./images/logos/le2i-logo.pdf}
-    \caption{Include an image}
-  \end{figure}
+
+    \begin{figure}
+      \centering
+      \includegraphics[width=.2\textwidth]{./images/ttl_7406.png}
+      \caption{TTL 7406}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Digital Electronics Basics}
+  \framesubtitle{Techno - information}
+
+
+ \begin{columns}[t]
+	 \begin{column}{5cm}
+		\begin{block}{TTL}
+			\begin{itemize}
+				\item Input voltage 5V +-5\%
+				\item 0 : 0.4V--0.8V
+				\item 1 : 2.4V--2.8V
+				\item TP : 10ns for "N" series and 1.5ns for "AS"
+			\end{itemize}
+		\end{block} 
+	\end{column}
+					   
+	\begin{column}{5cm}
+		\begin{block}{CMOS}
+			\begin{itemize}
+				\item Input voltage 3 to 18v
+				\item 0 : 0.05Vcc--0.45Vcc 
+				\item 1 : 0.55Vcc--0.95Vcc
+				\item TP : depending of Vcc
+			\end{itemize}
+		\end{block}   
+	\end{column}
+\end{columns}  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Digital Electronics Basics}
+  \framesubtitle{Techno - information}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{./images/cmos_tp.png}
+      \caption{TP vs Vcc}
+    \end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Digital Electronics Basics}
+  \framesubtitle{Considering a real problem}
+  \begin{block}{Implementation using Electronic component}
+    \begin{itemize}
+	\item Which Family? CMOS or TTL technology?
+	\item Find components you need and correspoding datasheet
+    \end{itemize}
+  \end{block}
+
+    \begin{figure}
+      \centering
+      \includegraphics[width=.2\textwidth]{./images/ttl_7406.png}
+      \caption{TTL 7406}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Digital Electronics Basics}
+  \framesubtitle{Considering a real problem}
+  \begin{block}{Implementation using Electronic component}
+    \begin{itemize}
+	\item Which Family? CMOS or TTL technology?
+	\item Find components you need and correspoding datasheet
+	\item Make the wiring of the circuit
+    \end{itemize}
+  \end{block}
+
+    \begin{figure}
+      \centering
+      \includegraphics[width=.2\textwidth]{./images/ttl_7406.png}
+      \caption{TTL 7406}
+    \end{figure}
 \end{frame}
 
 \subsection{Second subsection}
