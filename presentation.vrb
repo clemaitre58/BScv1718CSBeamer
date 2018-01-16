@@ -1,0 +1,10 @@
+\frametitle{Comments}
+\begin{lstlisting}[language=C++,keywordstyle=\color{red}]
+  // this is a inline comment
+  CStash intStash; // you could comment like this
+  /* this is block comment
+  int i;
+  char* cp;
+  ifstream in;
+  */
+\end{lstlisting}

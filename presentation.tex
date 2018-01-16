@@ -5,6 +5,7 @@
 
 \documentclass{beamer}
 
+\usepackage{listings}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc} 
 \usetheme{le2i} 
@@ -43,9 +44,9 @@
 \newcommand{\tick}{\color{green!60!black!80}\ding{51}}
 \newcommand{\cross}{\color{red!60!black!80}\ding{55}}
 
-\title{Digital Electonic}
+\title{Computer Science}
 \author{Cédric Lemaître \\ \texttt{c.lemaitre58@gmail.com}}
-\date{BScv 2016 - 2017 \\ 2\textsuperscript{nd} semester}
+\date{BScv 2017 - 2018 \\ 2\textsuperscript{nd} semester}
 
 \institute{Universit\'e de Bourgogne} 
 
@@ -68,179 +69,166 @@
   \tableofcontents[sectionstyle=show,subsectionstyle=show,subsubsectionstyle=hide]
 \end{frame}
 
-\section{Digital Electonic Basics}
+\section{Computer Science : C++}
 
-\subsection{Considering a real problem}
+\subsection{C++ Language : introduction}
 
 \begin{frame}
-  \frametitle{Digital Electronics Basics}
-  \framesubtitle{Considering a real problem}
-  \begin{block}{Problem}
-	  A tank is filled by 2 pipes : $V_1$ and $V_2$.
-	  We consider 3 levels
+  \frametitle{Objectives of the module}
+  \begin{block}{Objectives}
     \begin{itemize}
-	\item Warning (W)
-	\item Bottom (B)
-	\item top (T)
-    \end{itemize}
-    When level is behind W, $V_1$ et $V_2$ are opened.\\
-    When level is between W and B, only $V_1$ is opened.\\
-    When level is between B and T, only $V_2$ is opened.\\
-    When level is upper T, we close the pipe.
-  \end{block}
-
-  %  \begin{figure}
-  %    \centering
-  %    \includegraphics[width=.2\textwidth]{./images/logos/le2i-logo.pdf}
-  %    \caption{Include an image}
-  %  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Digital Electronics Basics}
-  \framesubtitle{Considering a real problem}
-  \begin{block}{How to do?}
-	  \begin{itemize}
-		  \item Make a drawing
-	  \end{itemize}
-\end{block}
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Digital Electronics Basics}
-  \framesubtitle{Considering a real problem}
-  \begin{block}{How to do?}
-	  \begin{itemize}
-		  \item Make a drawing
-		\item Make the truth table
-	  \end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Digital Electronics Basics}
-  \framesubtitle{Considering a real problem}
-  \begin{block}{How to do?}
-	  \begin{itemize}
-		  \item Make a drawing
-		\item Make the truth table
-		\item Reduice complexity by using Karnaugh table and rules
-	  \end{itemize}
-\end{block}
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Digital Electronics Basics}
-  \framesubtitle{Considering a real problem}
-  \begin{block}{Implementation using Electronic component}
-    \begin{itemize}
-	\item Which Family? CMOS or TTL technology?
+	\item learn C++ language
+	\item learn Object Programmation Concept
+	\item learn Optimized compilation chain
     \end{itemize}
   \end{block}
-
-    \begin{figure}
-      \centering
-      \includegraphics[width=.2\textwidth]{./images/ttl_7406.png}
-      \caption{TTL 7406}
-    \end{figure}
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Digital Electronics Basics}
-  \framesubtitle{Techno - information}
-
-
- \begin{columns}[t]
-	 \begin{column}{5cm}
-		\begin{block}{TTL}
-			\begin{itemize}
-				\item Input voltage 5V +-5\%
-				\item 0 : 0.4V--0.8V
-				\item 1 : 2.4V--2.8V
-				\item TP : 10ns for "N" series and 1.5ns for "AS"
-			\end{itemize}
-		\end{block} 
-	\end{column}
-					   
-	\begin{column}{5cm}
-		\begin{block}{CMOS}
-			\begin{itemize}
-				\item Input voltage 3 to 18v
-				\item 0 : 0.05Vcc--0.45Vcc 
-				\item 1 : 0.55Vcc--0.95Vcc
-				\item TP : depending of Vcc
-			\end{itemize}
-		\end{block}   
-	\end{column}
-\end{columns}  
-\end{frame}
-
-\begin{frame}
-  \frametitle{Digital Electronics Basics}
-  \framesubtitle{Techno - information}
-    \begin{figure}
-      \centering
-      \includegraphics[width=\textwidth]{./images/cmos_tp.png}
-      \caption{TP vs Vcc}
-    \end{figure}
-\end{frame}
-
-
-
-\begin{frame}
-  \frametitle{Digital Electronics Basics}
-  \framesubtitle{Considering a real problem}
-  \begin{block}{Implementation using Electronic component}
+  \frametitle{C++ introduction}
+  \begin{block}{Chronology}
     \begin{itemize}
-	\item Which Family? CMOS or TTL technology?
-	\item Find components you need and correspoding datasheet
+	\item first version 1983 by Bjarne Stroustrup
+	\item first standardized version 1998
+	\item last standardized version 2017
     \end{itemize}
   \end{block}
-
-    \begin{figure}
-      \centering
-      \includegraphics[width=.2\textwidth]{./images/ttl_7406.png}
-      \caption{TTL 7406}
-    \end{figure}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Digital Electronics Basics}
-  \framesubtitle{Considering a real problem}
-  \begin{block}{Implementation using Electronic component}
+  \frametitle{C++ introduction}
+  \begin{block}{What is C++?}
     \begin{itemize}
-	\item Which Family? CMOS or TTL technology?
-	\item Find components you need and correspoding datasheet
-	\item Make the wiring of the circuit
+	\item most used language for software dev
+	\item object oriented language
     \end{itemize}
   \end{block}
-
-    \begin{figure}
-      \centering
-      \includegraphics[width=.2\textwidth]{./images/ttl_7406.png}
-      \caption{TTL 7406}
-    \end{figure}
 \end{frame}
 
-%\subsection{Second subsection}
-%
-%\begin{frame}
-%  \frametitle{A Kick-Ass Title}
-%  \framesubtitle{A Kick-Ass Title Subtitle}
-%  \begin{block}{Block environment}
-%    \begin{itemize}
-%    \item[\cross] Cross item
-%    \item[\tick] Tick item
-%    \end{itemize}
-%  \end{block}
-%  \begin{equation}
-%    \label{eq:eq1}
-%    f(x)=ax+b \ .
-%  \end{equation}
-%\end{frame}
+\begin{frame}
+  \frametitle{C++ introduction}
+  \begin{block}{Advantages C++}
+    \begin{itemize}
+		\item high perf (vs python)
+		\item cross-plateform
+		\item object representation : increase dev flow
+		\item many object in standard lib
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+\subsection{Comments}
+\label{sub:comments}
+
+\begin{frame}[fragile]
+  \frametitle{Comments}
+\begin{lstlisting}[language=C++,keywordstyle=\color{red}]
+  // this is a inline comment
+  CStash intStash; // you could comment like this
+  /* this is block comment
+  int i;
+  char* cp;
+  ifstream in;
+  */
+\end{lstlisting}
+\end{frame}
+\subsection{Type}
+\label{sub:type}
+
+
+\begin{frame}
+  \frametitle{Standard type}
+  \begin{block}{integer}
+    \begin{itemize}
+		\item char
+		\item short
+		\item int
+		\item long
+    \end{itemize}
+	Each one could be unsigned or not.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Standard type}
+  \begin{block}{real}
+    \begin{itemize}
+		\item float
+		\item double
+		\item long double
+    \end{itemize}
+	Each one could be unsigned or not.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Standard type}
+  \begin{block}{integer}
+	  Be carefull : exact size of type variables depend of the compiler manufacturer  
+  \end{block}
+\end{frame}
+
+\subsection{variable definition}
+\label{sub:variable_definition}
+
+\begin{frame}
+  \frametitle{variable definition}
+	\begin{itemize}
+		\item definition
+		\item affection and assignment
+	\end{itemize}
+\end{frame}
+
+\subsection{instruction}
+\label{sub:instruction}
+
+\begin{frame}
+  \frametitle{instruction}
+	\begin{itemize}
+		\item all instruction finish with ;
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{operator}
+	\begin{itemize}
+		\item maths
+		\item logical
+	\end{itemize}
+\end{frame}
+
+\subsection{fonction}
+\label{sub:fonction}
+
+\begin{frame}
+  \frametitle{function}
+	\begin{itemize}
+		\item Definition
+		\item Call
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{function}
+	\begin{itemize}
+		\item where place the definition?
+		\item overloading a function
+	\end{itemize}
+\end{frame}
+
+\subsection{Our first binary}
+\label{sub:first_programm}
+
+\begin{frame}
+  \frametitle{Our first binary}
+	\begin{itemize}
+		\item code structure
+		\item compilation : gcc  -Wall  -o labs1.o   -c labs1.c
+		\item linking : gcc -o labs1  labs1.o
+		\item run binary ./labs1
+	\end{itemize}
+\end{frame}
 
 \end{document}
